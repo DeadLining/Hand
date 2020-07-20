@@ -1,8 +1,0 @@
-前端开发环境搭建指引：
-http://hzerodoc.saas.hand-china.com/zh/docs/development-guide/front-develop-guid/
-
-
-后端开发环境搭建指引：
-http://hzerodoc.saas.hand-china.com/zh/docs/development-guide/backend-develop-guid/
-
-大家可以看看上面两个链接，另外这个文档也可以参考参考，后面的部署可以先不弄，这个是单机的部署

@@ -1,2 +1,0 @@
-Maven知识补充
-http://wiki.jikexueyuan.com/project/maven/
