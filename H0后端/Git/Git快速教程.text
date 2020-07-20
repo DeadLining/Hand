@@ -1,0 +1,66 @@
+git+gitee
+
+```reStructuredText
+cd e:/Git/codegit
+
+git clone https://gitee.com/XXXXX/XXXXXX
+
+git config --global user.email "XXXXXXX@qq.com"
+
+git config --global user.name "XXX"
+
+cd codegit/
+
+git status
+
+git add .(文件名，文件夹名)
+
+git status
+
+git commit -m "说明"
+
+git status
+
+git push
+	XXXXXXX@qq.com
+	XXXXXXXXXX
+
+git status
+```
+
+git
+
+```reStructuredText
+git init
+
+cd e:/Git/codegit
+
+git status
+
+git add .(文件名，文件夹名)
+
+git status
+
+git commit -m "说明"
+
+git status
+```
+
+其他操作
+
+```reStructuredText
+1、工作空间的更改恢复
+git checkout -- .
+
+2、暂存空间的更改恢复
+(已经git add .)
+git reset head
+git checkout -- .
+
+3、恢复版本库中的提交更改（回退版本库）
+(已经git add .
+	git commit -m "版本2")
+git reset head^
+git checkout -- .
+```
+
