@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="bjja.hzero.customs.infra.mapper.ExpDecHeadMapper">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap id="BaseResultMap" type="bjja.hzero.customs.domain.entity.ExpDecHead">
+        <result column="exp_dec_id" property="expDecId" jdbcType="DECIMAL"/>
+        <result column="process_instance_id" property="processInstanceId" jdbcType="DECIMAL"/>
+        <result column="exp_dec_num" property="expDecNum" jdbcType="VARCHAR"/>
+        <result column="form_logistic" property="formLogistic" jdbcType="DECIMAL"/>
+        <result column="org_id" property="orgId" jdbcType="DECIMAL"/>
+        <result column="cus_delete_flag" property="cusDeleteFlag" jdbcType="DECIMAL"/>
+        <result column="exp_dec_status" property="expDecStatus" jdbcType="VARCHAR"/>
+        <result column="dec_custom" property="decCustom" jdbcType="VARCHAR"/>
+        <result column="gen_num" property="genNum" jdbcType="VARCHAR"/>
+        <result column="pre_num" property="preNum" jdbcType="VARCHAR"/>
+        <result column="custom_num" property="customNum" jdbcType="VARCHAR"/>
+        <result column="entry_clearance" property="entryClearance" jdbcType="VARCHAR"/>
+        <result column="eori_num" property="eoriNum" jdbcType="VARCHAR"/>
+        <result column="contract_num" property="contractNum" jdbcType="VARCHAR"/>
+        <result column="exp_date" property="expDate" jdbcType="DATE"/>
+        <result column="dec_date" property="decDate" jdbcType="DATE"/>
+        <result column="domestic_uscc_num" property="domesticUsccNum" jdbcType="VARCHAR"/>
+        <result column="domestic_custom_num" property="domesticCustomNum" jdbcType="VARCHAR"/>
+        <result column="domestic_ciq_num" property="domesticCiqNum" jdbcType="VARCHAR"/>
+        <result column="domestic_enterprise_name" property="domesticEnterpriseName" jdbcType="VARCHAR"/>
+        <result column="overseas_num" property="overseasNum" jdbcType="VARCHAR"/>
+        <result column="overseas_name" property="overseasName" jdbcType="VARCHAR"/>
+        <result column="sale_uscc_num" property="saleUsccNum" jdbcType="VARCHAR"/>
+        <result column="sale_custom_num" property="saleCustomNum" jdbcType="VARCHAR"/>
+        <result column="sale_ciq_code" property="saleCiqCode" jdbcType="VARCHAR"/>
+        <result column="sale_enterprise_name" property="saleEnterpriseName" jdbcType="VARCHAR"/>
+        <result column="dec_uscc_num" property="decUsccNum" jdbcType="VARCHAR"/>
+        <result column="dec_custom_num" property="decCustomNum" jdbcType="VARCHAR"/>
+        <result column="dec_ciq_num" property="decCiqNum" jdbcType="VARCHAR"/>
+        <result column="dec_enterprise_name" property="decEnterpriseName" jdbcType="VARCHAR"/>
+        <result column="transport_type" property="transportType" jdbcType="VARCHAR"/>
+        <result column="transport_viehcle" property="transportViehcle" jdbcType="VARCHAR"/>
+        <result column="voyage_num" property="voyageNum" jdbcType="VARCHAR"/>
+        <result column="bl_num" property="blNum" jdbcType="VARCHAR"/>
+        <result column="regulatory_type" property="regulatoryType" jdbcType="VARCHAR"/>
+        <result column="extempt_code" property="extemptCode" jdbcType="VARCHAR"/>
+        <result column="license_num" property="licenseNum" jdbcType="VARCHAR"/>
+        <result column="arrival_country" property="arrivalCountry" jdbcType="VARCHAR"/>
+        <result column="destinationr_port" property="destinationrPort" jdbcType="VARCHAR"/>
+        <result column="trade_type" property="tradeType" jdbcType="VARCHAR"/>
+        <result column="fare_method" property="fareMethod" jdbcType="VARCHAR"/>
+        <result column="fare_amount" property="fareAmount" jdbcType="DECIMAL"/>
+        <result column="fare_cr_num" property="fareCrNum" jdbcType="VARCHAR"/>
+        <result column="premium_method" property="premiumMethod" jdbcType="VARCHAR"/>
+        <result column="premium_amount" property="premiumAmount" jdbcType="DECIMAL"/>
+        <result column="premium_cr_num" property="premiumCrNum" jdbcType="VARCHAR"/>
+        <result column="extra_method" property="extraMethod" jdbcType="VARCHAR"/>
+        <result column="extra_amount" property="extraAmount" jdbcType="DECIMAL"/>
+        <result column="extra_cr_num" property="extraCrNum" jdbcType="VARCHAR"/>
+        <result column="quantity" property="quantity" jdbcType="DECIMAL"/>
+        <result column="package_type" property="packageType" jdbcType="VARCHAR"/>
+        <result column="package_type_name" property="packageTypeName" jdbcType="VARCHAR"/>
+        <result column="package_type_main" property="packageTypeMain" jdbcType="VARCHAR"/>
+        <result column="gross_weight" property="grossWeight" jdbcType="DECIMAL"/>
+        <result column="net_weight" property="netWeight" jdbcType="DECIMAL"/>
+        <result column="trade_country" property="tradeCountry" jdbcType="VARCHAR"/>
+        <result column="doc_attached" property="docAttached" jdbcType="VARCHAR"/>
+        <result column="entry_port" property="entryPort" jdbcType="VARCHAR"/>
+        <result column="departure_port" property="departurePort" jdbcType="VARCHAR"/>
+        <result column="declaration_type" property="declarationType" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="mark" property="mark" jdbcType="VARCHAR"/>
+        <result column="spec_relation_confirm" property="specRelationConfirm" jdbcType="DECIMAL"/>
+        <result column="price_influence_confirm" property="priceInfluenceConfirm" jdbcType="DECIMAL"/>
+        <result column="fee_confirm" property="feeConfirm" jdbcType="DECIMAL"/>
+        <result column="paper_less" property="paperLess" jdbcType="DECIMAL"/>
+        <result column="self_reporting_fee" property="selfReportingFee" jdbcType="DECIMAL"/>
+        <result column="serep_sePay" property="serepSepay" jdbcType="DECIMAL"/>
+        <result column="guarantee_give" property="guaranteeGive" jdbcType="DECIMAL"/>
+        <result column="water_running" property="waterRunning" jdbcType="DECIMAL"/>
+        <result column="tenant_id" property="tenantId" jdbcType="DECIMAL"/>
+        <result column="enabled_flag" property="enabledFlag" jdbcType="DECIMAL"/>
+        <result column="object_version_number" property="objectVersionNumber" jdbcType="DECIMAL"/>
+        <result column="creation_date" property="creationDate" jdbcType="DATE"/>
+        <result column="created_by" property="createdBy" jdbcType="DECIMAL"/>
+        <result column="real_name" property="createName" jdbcType="VARCHAR"/>
+        <result column="last_updated_by" property="lastUpdatedBy" jdbcType="DECIMAL"/>
+        <result column="last_update_date" property="lastUpdateDate" jdbcType="DATE"/>
+        <result column="ATTRIBUTE_CATEGORY" property="attributeCategory" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE1" property="attribute1" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE2" property="attribute2" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE3" property="attribute3" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE4" property="attribute4" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE5" property="attribute5" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE6" property="attribute6" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE7" property="attribute7" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE8" property="attribute8" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE9" property="attribute9" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE10" property="attribute10" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE11" property="attribute11" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE12" property="attribute12" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE13" property="attribute13" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE14" property="attribute14" jdbcType="VARCHAR"/>
+        <result column="ATTRIBUTE15" property="attribute15" jdbcType="VARCHAR"/>
+        <result column="is_retry" property="isRetry" jdbcType="DECIMAL"/>
+        <result column="is_email" property="isEmail" jdbcType="DECIMAL"/>
+        <result column="pl_num" property="plNum" jdbcType="VARCHAR"/>
+        <result column="email_address" property="emailAddress" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="objectColumns">
+        hedh.exp_dec_id,
+        hedh.process_instance_id,
+        hedh.exp_dec_num,
+        hedh.cus_delete_flag,
+        het.exp_task_Num,
+        het.form_logistic,
+        het.pl_num,
+        hedh.org_id,
+        hedh.exp_dec_status,
+        hedh.dec_custom,
+        hedh.gen_num,
+        hedh.pre_num,
+        hedh.custom_num,
+        hedh.entry_clearance,
+        hedh.eori_num,
+        hedh.contract_num,
+        hedh.exp_date,
+        hedh.dec_date,
+        hedh.domestic_uscc_num,
+        hedh.domestic_custom_num,
+        hedh.domestic_ciq_num,
+        hedh.domestic_enterprise_name,
+        hedh.overseas_num,
+        hedh.overseas_name,
+        hedh.sale_uscc_num,
+        hedh.sale_custom_num,
+        hedh.sale_ciq_code,
+        hedh.sale_enterprise_name,
+        hedh.dec_uscc_num,
+        hedh.dec_custom_num,
+        hedh.dec_ciq_num,
+        hedh.dec_enterprise_name,
+        hedh.transport_type,
+        hedh.transport_viehcle,
+        hedh.voyage_num,
+        hedh.bl_num,
+        hedh.regulatory_type,
+        hedh.extempt_code,
+        hedh.license_num,
+        hedh.arrival_country,
+        hedh.destinationr_port,
+        hedh.trade_type,
+        hedh.fare_method,
+        hedh.fare_amount,
+        hedh.fare_cr_num,
+        hedh.premium_method,
+        hedh.premium_amount,
+        hedh.premium_cr_num,
+        hedh.extra_method,
+        hedh.extra_amount,
+        hedh.extra_cr_num,
+        hedh.quantity,
+        hedh.package_type,
+        hedh.gross_weight,
+        hedh.net_weight,
+        hedh.trade_country,
+        hedh.doc_attached,
+        hedh.entry_port,
+        hedh.departure_port,
+        hedh.declaration_type,
+        hedh.remark,
+        hedh.mark,
+        hedh.spec_relation_confirm,
+        hedh.price_influence_confirm,
+        hedh.fee_confirm,
+        hedh.paper_less,
+        hedh.self_reporting_fee,
+        hedh.serep_sePay,
+        hedh.guarantee_give,
+        hedh.water_running,
+        hedh.tenant_id,
+        hedh.enabled_flag,
+        hedh.object_version_number,
+        hedh.creation_date,
+        hedh.created_by,
+        iu.real_name,
+        hedh.last_updated_by,
+        hedh.last_update_date,
+        hedh.ATTRIBUTE_CATEGORY,
+        hedh.ATTRIBUTE1,
+        hedh.ATTRIBUTE2,
+        hedh.ATTRIBUTE3,
+        hedh.ATTRIBUTE4,
+        hedh.ATTRIBUTE5,
+        hedh.ATTRIBUTE6,
+        hedh.ATTRIBUTE7,
+        hedh.ATTRIBUTE8,
+        hedh.ATTRIBUTE9,
+        hedh.ATTRIBUTE10,
+        hedh.ATTRIBUTE11,
+        hedh.ATTRIBUTE12,
+        hedh.ATTRIBUTE13,
+        hedh.ATTRIBUTE14,
+        hedh.ATTRIBUTE15,
+        hedh.email_address,
+        hedh.package_type_main,
+        case
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and hedh.cus_delete_flag = 1 then 1
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and not exists(select 1
+                                                                      from hctm_dec_receipt her
+                                                                      where her.entry_id = hedh.exp_dec_num
+               ) then 1
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and exists(select 1
+                                                                  from hctm_dec_receipt her
+                                                                  where her.entry_id = hedh.exp_dec_num
+                                                                    and her.channel = 'D'
+               ) then 1
+           when hedh.exp_dec_status = 'SUBMITTED' then 1
+           else 0
+           end is_retry,
+       case
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and hedh.cus_delete_flag = 1 then 0
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and not exists(select 1
+                                                                      from hctm_dec_receipt her
+                                                                      where her.entry_id = hedh.exp_dec_num
+               ) then 1
+           when hedh.exp_dec_status = 'SAVE_SUCCESSED' and exists(select 1
+                                                                  from hctm_dec_receipt her
+                                                                  where her.entry_id = hedh.exp_dec_num
+                                                                    and her.channel = 'D'
+               ) then 1
+           else 0
+           end is_email,
+        (SELECT group_concat((SELECT hlvt.meaning
+        FROM hzero_platform.hpfm_lov_value hlv
+        LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+        ON hlv.lov_value_id = hlvt.lov_value_id
+        WHERE hlv.lov_code = 'HCTM.IMP_EXP.PACKAGE_CODE'
+        AND hlvt.lang = 'zh_CN'
+        AND hlv. VALUE = substring_index(substring_index(hedh1.package_type,
+        ',',
+        ht.help_topic_id + 1),
+        ',',
+        -1)))
+        FROM hctm_exp_dec_head hedh1
+        LEFT JOIN mysql.help_topic ht
+        ON ht.help_topic_id &lt; (length(hedh1.package_type) - length(REPLACE(hedh1.package_type,
+        ',',
+        '')) + 1)
+        WHERE hedh1.exp_dec_num = hedh.exp_dec_num) package_type_name
+    </sql>
+
+    <select id="pageAndSortOption" resultMap="BaseResultMap"
+            parameterType="bjja.hzero.customs.domain.entity.ExpDecHead">
+        select
+        <include refid="objectColumns"/>
+        from hctm_exp_dec_head hedh
+        left join hctm_export_task het on het.pre_imp_dcl=hedh.exp_dec_num
+        left join hzero_platform.iam_user iu on iu.id=hedh.created_by
+        <where>
+            <if test="orgId!=null ">
+                and hedh.org_id=#{orgId}
+            </if>
+            <if test="expDecNum!=null and expDecNum!=''">
+                <bind name="expDecNumLike" value="'%'+expDecNum+'%'"/>
+                and hedh.exp_dec_num like #{expDecNumLike}
+            </if>
+            <if test="expTaskNum!=null and expTaskNum!=''">
+                <bind name="expTaskNumLike" value="'%'+expTaskNum+'%'"/>
+                and het.exp_task_Num like #{expTaskNumLike}
+            </if>
+            <if test="plNum!=null and plNum!=''">
+                <bind name="plNumLike" value="'%'+plNum+'%'"/>
+                and upper(het.pl_num) like upper(#{plNumLike})
+            </if>
+            <if test="expDecStatus!=null and expDecStatus!=''">
+                and hedh.exp_dec_status=#{expDecStatus}
+            </if>
+            <if test="createdBy!=null">
+                and hedh.created_by=#{createdBy}
+            </if>
+            <if test="creationDateFrom!=null ">
+                and hedh.creation_date>#{creationDateFrom}
+            </if>
+            <if test="creationDateTo!=null ">
+                and hedh.creation_date &lt; #{creationDateTo}
+            </if>
+        </where>
+    </select>
+    <select id="selectByOption" resultType="bjja.hzero.customs.domain.entity.ExpDecHead">
+        select
+        <include refid="objectColumns"/>
+        from hctm_exp_dec_head hedh
+        left join hctm_export_task het on het.pre_imp_dcl=hedh.exp_dec_num
+        left join hzero_platform.iam_user iu on iu.id=hedh.created_by
+        where hedh.exp_dec_id=#{expDecId}
+    </select>
+    <select id="getAllLogisticsPlan" resultType="cn.pigicutils.core.lang.Dict">
+        select hlp.logistics_num,
+               hlp.pack_logistics_id,
+               hlp.ship_agent_id,
+               hlp.cargo_agent,
+               hplr.org_id,
+               hplr.client_id,
+               hlp.eta,
+               hlp.etd,
+               hlp.ata,
+               hlp.atd,
+               hlp.bill_lading_num,
+               hplr.product_name,
+               hlp.part_stock_quantity,
+               hlp.car_quantity,
+               hlp.container_model
+        from hctm_logistics_plan hlp
+        left join hctm_pack_logistics_relation hplr on hplr.id=hlp.pack_logistics_id
+        left join hctm_export_task het on het.exp_task_Num=hlp.exp_task_num
+        left join hctm_exp_dec_head hedh on hedh.exp_dec_num=het.pre_imp_dcl
+        where hedh.exp_dec_num=#{expDecNum}
+    </select>
+    <select id="getVolumn" resultType="cn.pigicutils.core.lang.Dict">
+        select helh.total_volume,
+               helh.volume_unit,
+               helh.invoice_num
+        from hctm_export_listinvoice_head helh
+        left join hctm_export_task het on het.exp_task_id=helh.exp_task_id
+        where het.pre_imp_dcl=#{expDecNum}
+    </select>
+
+    <select id="oneObjectByNum" resultType="bjja.hzero.customs.domain.entity.ExpDecHead">
+        select
+        <include refid="objectColumns"/>
+        from hctm_exp_dec_head hedh
+        left join hctm_export_task het on het.pre_imp_dcl=hedh.exp_dec_num
+        left join hzero_platform.iam_user iu on iu.id=hedh.created_by
+        where hedh.exp_dec_num=#{expDecNum}
+    </select>
+    <select id="approveRuleList" resultType="string">
+        select he.employee_num
+        from hctm_exp_dec_head hedh
+        left join hzero_platform.hpfm_employee_assign hea on hea.unit_company_id=hedh.org_id
+        left join hzero_platform.hpfm_position hp on hp.position_id=hea.position_id
+        left join hzero_platform.hpfm_employee he on he.employee_id=hea.employee_id
+        where
+              hp.position_code like 'BGY_%'
+              and hedh.exp_dec_id=#{id}
+    </select>
+    <select id="selectDetail" resultType="cn.pigicutils.core.lang.Dict">
+        select hedh.exp_dec_num,
+               het.exp_task_Num
+        from hctm_exp_dec_head hedh
+                 left join hctm_export_task het on het.pre_imp_dcl = hedh.exp_dec_num
+        where hedh.exp_dec_id = #{id}
+    </select>
+    <select id="tips" resultType="cn.pigicutils.core.lang.Dict">
+        select ifnull(sum(legal_first_qty),0) legalFirstQtySum,
+               ifnull(sum(legal_sec_qty),0)   legalSecQtySum,
+               ifnull(sum(trade_qty),0)       tradeQtySum,
+               ifnull(sum(total_price),0)     totalPriceSum
+        from hctm_exp_dec_head hedh
+                 left join hctm_exp_dec_line hedl on hedl.exp_dec_id= hedh.exp_dec_id
+        where hedh.exp_dec_id = #{expDecId}
+        group by hedh.exp_dec_id
+    </select>
+    <select id="getOrgidByCusId" resultType="_long">
+        select wc.inner_unit_id
+        from bjja_mdm.wmdm_customer wc
+        where wc.id = #{clientId}
+    </select>
+    <select id="selectEmailByExpNum" resultType="string">
+        select het.email
+        from hctm_export_task het
+        where het.pre_imp_dcl=#{expDecNum}
+    </select>
+    <select id="selectOrgIdByDestPort" resultType="_long">
+        select ww.org_id
+        from wmdm_warehouse ww
+        where ww.dest_port=#{destinationPort}
+        group by ww.org_id
+    </select>
+    <select id="selectReportHead" resultType="cn.pigicutils.core.lang.Dict">
+        select hedh.exp_dec_id,
+               hedh.gen_num,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CUSTOM_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.dec_custom)        dec_custom,
+               hedh.custom_num,
+               hedh.domestic_uscc_num,
+               hedh.domestic_enterprise_name,
+               hedh.domestic_custom_num,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CUSTOM_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.entry_clearance)   entry_clearance,
+               hedh.exp_date,
+               hedh.dec_date,
+               hedh.eori_num,
+               hedh.overseas_num,
+               hedh.overseas_name,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.TRANSPORT_TYPE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.transport_type)    transport_type,
+               hedh.transport_viehcle,
+               hedh.voyage_num,
+               hedh.bl_num,
+               hedh.sale_uscc_num,
+               hedh.sale_enterprise_name,
+               hedh.sale_custom_num,
+               hedh.regulatory_type,
+               hedh.extempt_code,
+               hedh.license_num,
+               hedh.contract_num,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.COUNTRY'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.trade_country)     trade_country,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.COUNTRY'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.arrival_country)   arrival_country,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.DESTINATION_PORT'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.destinationr_port) destinationr_port,
+               hedh.departure_port,
+               hedh.package_type,
+               hedh.package_type_main,
+               hedh.quantity,
+               hedh.gross_weight,
+               hedh.net_weight,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.IMP_EXP.TRADE_TYPE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.trade_type)        trade_type,
+
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.IMP_EXP.CALCULATE_TYPE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.fare_method)       fare_method,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CURRENCY_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.fare_cr_num)       fare_cr_num,
+               hedh.fare_amount,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.IMP_EXP.CALCULATE_TYPE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.premium_method)    premium_method,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CURRENCY_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.premium_cr_num)    premium_cr_num,
+               hedh.premium_amount,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.EXP_CRED_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hesc.exp_cred_code)     exp_cred_code,
+               hesc.exp_cred_num,
+               hedh.mark,
+               hedh.remark,
+               hedh.spec_relation_confirm,
+               hedh.price_influence_confirm,
+               hedh.fee_confirm,
+               hedh.serep_sepay,
+               hedh.dec_uscc_num,
+               hedh.dec_enterprise_name,
+               hedh.dec_custom_num,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.IMP_EXP.CALCULATE_TYPE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.extra_method)      extra_method,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CURRENCY_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedh.extra_cr_num)      extra_cr_num,
+               0 + CAST(extra_amount AS CHAR)             extra_amount,
+               het.pl_num
+        from hctm_exp_dec_head hedh
+                 left join hctm_export_task het
+                           on het.pre_imp_dcl = hedh.exp_dec_num
+                 LEFT JOIN hctm_exp_single_card hesc
+                           ON hesc.exp_dec_id = hedh.exp_dec_id
+        where hedh.exp_dec_num = #{expDecNum}
+    </select>
+    <select id="selectReportLine" resultType="cn.pigicutils.core.lang.Dict">
+        select hedl.line_num,
+               hedl.hs_code,
+               hedl.commodity_name,
+               hedl.brand_type,
+               hedl.trade_qty,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.UOM'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedl.trade_uom)    trade_uom,
+               hedl.unit_price,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.COUNTRY'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedl.dest_country) dest_country,
+               (SELECT hlvt.meaning
+                FROM hzero_platform.hpfm_lov_value hlv
+                         LEFT JOIN hzero_platform.hpfm_lov_value_tl hlvt
+                                   ON hlv.lov_value_id = hlvt.lov_value_id
+                WHERE hlv.lov_code = 'HCTM.CURRENCY_CODE'
+                  AND hlvt.lang = 'zh_CN'
+                  AND hlv.value = hedl.currency)     currency,
+               hedl.domestic_dest,
+               hedl.extempt_type,
+               0 + CAST(hedl.total_price AS CHAR)    total_price
+        from hctm_exp_dec_line hedl
+        where hedl.exp_dec_id = #{expDecId}
+    </select>
+</mapper>

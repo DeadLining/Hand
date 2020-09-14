@@ -1,0 +1,17 @@
+解决：数据库中表结构的字段 与 Java中POJO类的属性之间无法直接映射
+
+例如：
+数据库中的字段：student_name
+POJO类的属性：studentName
+问题：由于下划线的存在，使它们二者之间无法直接映射，需要通过加入相应的配置文件来解决
+
+MyBatisConfig.java
+
+
+或使用：
+application.yml：
+# MyBatis Mapper 扫描
+mybatis:
+  mapperLocations: classpath*:/mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true

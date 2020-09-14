@@ -1,0 +1,3 @@
+org.example
+templatestart-archetype
+1.0-SNAPSHOT

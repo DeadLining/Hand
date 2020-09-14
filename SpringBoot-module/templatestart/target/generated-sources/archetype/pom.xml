@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>templatestart-archetype</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>templatestart-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.0.0</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>Parent pom providing dependency and plugin management for applications
+		built with Maven</description>
+
+  <url>https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/hzero-parent/hzero-28250-parent/templatestart</url>
+
+  <developers>
+    <developer>
+      <name>Pivotal</name>
+      <email>info@pivotal.io</email>
+      <organization>Pivotal Software, Inc.</organization>
+      <organizationUrl>http://www.spring.io</organizationUrl>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/hzero-parent/hzero-28250-parent/templatestart</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>HzeroRelease</id>
+      <name>Hzero-Release Repository</name>
+      <url>http://nexus.saas.hand-china.com/content/repositories/Hzero-Release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>HzeroSnapshot</id>
+      <name>Hzero-Snapshot Repository</name>
+      <url>http://nexus.saas.hand-china.com/content/repositories/Hzero-Snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

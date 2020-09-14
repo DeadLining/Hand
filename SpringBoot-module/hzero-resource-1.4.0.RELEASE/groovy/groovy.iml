@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/hzero_scheduler" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_report" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_im" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_monitor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_import" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_rule_engine" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_admin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_pay" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_ocr" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_search" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_interface" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_message" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_iot" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_file" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_asgard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_webexcel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_nlp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_charge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_ebank" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_platform" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_workflow_plus" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_dpm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hzero_invoice" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

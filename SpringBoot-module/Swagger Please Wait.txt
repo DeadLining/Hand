@@ -1,0 +1,9 @@
+Swagger Please Wait
+解决：
+1、多网卡，关闭其中不用的网卡
+2、bootstrap.yml
+      inetutils:
+      # 本地多网卡时，忽略回环网卡
+      ignored-interfaces[0]: lo
+      # 本地多网卡时，选择注册的网段
+      preferred-networks[0]: 10.211
